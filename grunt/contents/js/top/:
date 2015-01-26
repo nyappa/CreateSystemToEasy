@@ -14,13 +14,18 @@ end
 get'/generate_data.json' do
     content_type :json
     if @params[:id] == "12" then
-        return [ 
+        [ 
           {:id => 1234, :name => "tanaka"},
-          {:id => 2344, :name => "misono6"},
-          {:id => 2345, :name => "misono4"},
-          {:id => 2346, :name => "misono3"},
-          {:id => 2343, :name => "misono"}
+          {:id => 2344, :name => "misono"},
+          {:id => 2344, :name => "misono"},
+          {:id => 2344, :name => "misono"},
+          {:id => 2343, :name => "misono"},
+          {:id => 2354, :name => "misono"},
+          {:id => 2344, :name => "misono"},
+          {:id => 2344, :name => "misono"},
+          {:id => 2344, :name => "misono"}
         ].to_json
+        return
     end
     [ 
       {:id => 1234, :name => "tanaka"},

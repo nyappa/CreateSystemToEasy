@@ -1,22 +1,37 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <title>Test</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <script src="/js/contents_all.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <title>Test</title>
+</head>
+<body>
+  <div class="js-page-layout">
+    <span class="icon-coin">SandChild</span>
+    <span class="js-main"></span>
+  </div>
+</body>
 
-    <span class="js-seisan-count">0</span>台生産
-    <img src="/images/pankeiki.gif">
+<script type="text/template" id="top-page-template">
+Welcom to sample site!
+<a href="#" class="js-open-example">Open the example</a>
+</script>
 
-  </body>
-  <script>
-    $(function(){
-      var count = 0;
-      window.setInterval(function(){ 
-          count++
-          $(".js-seisan-count").text(count);
-      }, 1000);
-    });
-  </script>
+<script type="text/template" id="example-template">
+Getting json data from the endpoint "/generate_data.json"!!
+<ul></ul>
+<a href="#" class="js-send-id">Send a id</a>
+<a href="#">Return</a>
+</script>
+
+<script type="text/template" id="app-template">
+{{id}}: {{name}}
+</script>
+
+<script>
+  $(function(){
+    Apps.start();
+  });
+</script>
+
 </html>
